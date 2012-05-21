@@ -1,0 +1,225 @@
+/*
+ * blargs.css_t
+ * ~~~~~~~~~~~~
+ *
+ * Sphinx stylesheet -- blargs theme
+ *
+ * :copyright: Copyright 2007-2010 by Karl Gyllstrom
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+{% set page_width = '940px' %}
+{% set sidebar_width = '220px' %}
+
+
+@import url("basic.css");
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+
+/* start bg flare */
+/* IE10 */ 
+background-image: -ms-radial-gradient(center, circle farthest-corner, #73C6EF 0%, #00A3EF 100%);
+
+/* Mozilla Firefox */ 
+background-image: -moz-radial-gradient(center, circle farthest-corner, #73C6EF 0%, #00A3EF 100%);
+
+/* Opera */ 
+background-image: -o-radial-gradient(center, circle farthest-corner, #73C6EF 0%, #00A3EF 100%);
+
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(radial, center center, 0, center center, 451, color-stop(0, #73C6EF), color-stop(1, #00A3EF));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-radial-gradient(center, circle farthest-corner, #73C6EF 0%, #00A3EF 100%);
+
+/* Proposed W3C Markup */ 
+background-image: radial-gradient(center, circle farthest-corner, #73C6EF 0%, #00A3EF 100%);
+/% end bg flare %/
+
+    margin: 0;
+    padding: 0;
+}
+
+div.document {
+    width: {{ page_width }};
+    margin: 30px auto 0 auto;
+}
+
+div.bodywrapper {
+    margin: 0 0 0 {{ sidebar_width }};
+} 
+
+pre, tt {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 0.9em;
+} 
+
+pre {
+    background: #408000;
+padding: 7px 30px;
+    margin: 15px -30px;
+    line-height: 1.3em;
+}
+
+dl pre, blockquote pre, li pre {
+    margin-left: -60px;
+    padding-left: 60px;
+}
+
+dl dl pre {
+    margin-left: -90px;
+    padding-left: 90px;
+}
+ 
+tt {
+    background-color: #408000;
+    color: #40800;
+    /* padding: 1px 2px; */
+}
+
+tt.xref, a tt {
+border-bottom: 1px solid white;
+}
+
+div.sphinxsidebar a {
+    color: #FFFF8e;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+div.sphinxsidebar a:hover {
+    border-bottom: 1px solid #999;
+}
+
+div.sphinxsidebar {
+    width: {{ sidebar_width }};
+}
+
+div.sphinxsidebar {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+div.sphinxsidebarwrapper {
+    padding: 18px 10px;
+}
+
+div.sphinxsidebarwrapper p.logo {
+    padding: 0 0 20px 0;
+    margin: 0;
+    text-align: center;
+}
+ 
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+    font-family: 'Garamond', 'Georgia', serif;
+    color: #FFFF8e;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+div.sphinxsidebar h4 {
+    font-size: 20px;
+}
+ 
+div.sphinxsidebar h3 a {
+    color: #FFFF8e;
+}
+
+div.sphinxsidebar p.logo a,
+div.sphinxsidebar h3 a,
+div.sphinxsidebar p.logo a:hover,
+div.sphinxsidebar h3 a:hover {
+    border: none;
+}
+ 
+div.sphinxsidebar p {
+    color: #555;
+    margin: 10px 0;
+}
+
+div.sphinxsidebar ul {
+    margin: 10px 0;
+    padding: 0;
+    color: #000;
+}
+ 
+div.sphinxsidebar input {
+    border: 1px solid #ccc;
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+}
+
+div.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+hr {
+    border: 1px solid #B1B4B6;
+}
+ 
+div.body {
+	color: #FFFF8e;
+    padding: 0 30px 30px 30px;
+}
+
+img.floatingflask {
+    padding: 0 0 10px 10px;
+    float: right;
+}
+ 
+div.footer {
+    text-align: right;
+    color: #888;
+    padding: 10px;
+    font-size: 14px;
+    width: 650px;
+    margin: 0 auto 40px auto;
+}
+ 
+div.footer a {
+    color: #888;
+    text-decoration: underline;
+}
+ 
+div.related {
+    line-height: 32px;
+    color: #888;
+}
+
+div.related ul {
+    padding: 0 0 0 10px;
+}
+ 
+div.related a {
+    color: #444;
+}
+
+
+div.body {
+    padding-bottom: 40px; /* saved for footer */
+}
+ 
+div.body h1,
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    font-family: 'Garamond', 'Georgia', serif;
+    font-weight: normal;
+    margin: 30px 0px 10px 0px;
+    padding: 0;
+}
+
+div.header_indexwrapper h1 {
+    text-indent: -999999px;
+    background: url({{ theme_index_logo }}) no-repeat center center;
+    height: {{ theme_index_logo_height }};
+}
